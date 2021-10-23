@@ -1,0 +1,18 @@
+#Lab Task # 1
+# Taking user input
+string=input("Enter a string: ")
+# Creating a stack
+stack=[]
+# Appending items in stack
+for items in string:
+stack.append(items)
+print("Entered string is : ",stack)
+# Reversing items of stack
+reverse_string=string[::-1]
+print("Reversed string is : ",reverse_strin
+g)
+# Checking if string is palindrome or not
+if string==reverse_string:
+print("String is Palindrome")
+else:
+print("String is not Palindrome")
