@@ -1,0 +1,37 @@
+# Lab Task # 2
+def check_parentheses(exp,N):
+ans = True
+expression = []
+for i in exp:
+# push if opening bracket
+if i == "(" or i == "[" or i == "{":
+expression.append(i)
+else:
+if len(expression) > 0:
+temp = expression[len(expression) - 1]
+expression.pop()
+if i == "(" and temp != ")":
+ans = False
+break
+if i == "[" and temp != "]":
+ans = False
+break
+if i == "{" and temp != "}":
+ans = False
+break
+# if stack is empty, not balanced
+else:
+ans = False
+break
+if len(expression) > 0:
+ans = False
+if ans:
+print("Expression Balanced")
+else:
+print("Expression Not balanced")
+expression = input("Enter an expression for
+evaluation : " )
+expression_length = len(expression)
+check_parentheses(expression,expression_len
+gth)
+)
